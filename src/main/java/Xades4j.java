@@ -119,7 +119,7 @@ public class Xades4j {
 		XadesSigner signer = getSigner();
 		System.out.println("==============\tSign\t==============");
 		signWithoutIDEnveloped(CANONICAL, SIGNED, signer);
-		//System.out.println("==============\tVerify\t==============");
+		System.out.println("==============\tVerify\t==============");
 		//verifyBes(SIGNED);
 		verifyBesWindowStore(SIGNED);
 		System.out.println("==============\tFinish\t==============");
@@ -412,6 +412,7 @@ public class Xades4j {
 		KeyStore keyStore = KeyStore.getInstance(KEYSTORE_TYPE);
 		keyStore.load(null, null) ;
 		String alias = certHelper.getCNfromX509(chain[0].getSubjectX500Principal());
+		System.out.println("Alias : " + alias);
 		PrivateKey privateKey = (PrivateKey)keyStore.getKey(alias, null);			
 		KeyingDataProvider keyingProvider = new DirectKeyingDataProvider((X509Certificate) cert, privateKey);
 //		KeyingDataProvider keyingProvider = new PKCS11KeyStoreKeyingDataProvider(PKCS11_LIB_PATH, PROVIDER_NAME,
