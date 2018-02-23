@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rsm:TaxInvoice_CrossIndustryInvoice 
+ xmlns:ram="urn:etda:uncefact:data:standard:TaxInvoice_ReusableAggregateBusinessInformationEntity:2"
+ xmlns:rsm="urn:etda:uncefact:data:standard:TaxInvoice_CrossIndustryInvoice:2"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="urn:etda:uncefact:data:standard:TaxInvoice_CrossIndustryInvoice:2">
+    <rsm:ExchangedDocumentContext>
+        <ram:GuidelineSpecifiedDocumentContextParameter>
+            <ram:ID schemeAgencyID="ETDA" schemeVersionID="v2.0">ER3-2560</ram:ID>
+        </ram:GuidelineSpecifiedDocumentContextParameter>
+    </rsm:ExchangedDocumentContext>
+    <rsm:ExchangedDocument>
+        <ram:ID>INV01</ram:ID>
+        <ram:Name>ใบกำกับภาษี</ram:Name>
+        <ram:TypeCode>388</ram:TypeCode>
+        <ram:IssueDateTime>2017-12-19T00:00:00.000</ram:IssueDateTime>
+        
+        
+        <ram:CreationDateTime>2017-12-19T00:00:00.000</ram:CreationDateTime>
+        
+    </rsm:ExchangedDocument>
+    <rsm:SupplyChainTradeTransaction>
+        <ram:ApplicableHeaderTradeAgreement>
+            <ram:SellerTradeParty>
+				      <ram:Name>บริษัท ขยันหมั่นเพียร จำกัด</ram:Name>
+              <ram:SpecifiedTaxRegistration>
+              <ram:ID schemeID="TXID">111111111111100000</ram:ID>
+              </ram:SpecifiedTaxRegistration>
+              <ram:DefinedTradeContact>
+            <ram:EmailURIUniversalCommunication> 
+ <ram:URIID>natueal@example.com</ram:URIID> 
+ </ram:EmailURIUniversalCommunication> 
+
+            <ram:TelephoneUniversalCommunication> 
+ <ram:CompleteNumber>+66-81234567</ram:CompleteNumber> 
+ </ram:TelephoneUniversalCommunication> 
+
+</ram:DefinedTradeContact>
+                                 
+              <ram:PostalTradeAddress>
+                    <ram:PostcodeCode>71180</ram:PostcodeCode>
+                <ram:LineOne>สำนักงานอุทยานแห่งชาติ </ram:LineOne>
+                
+                <ram:CityName>7107</ram:CityName>
+                <ram:CitySubDivisionName>710705</ram:CitySubDivisionName>
+                <ram:CountryID schemeID="3166-1 alpha-2">TH</ram:CountryID>
+                <ram:CountrySubDivisionID>71</ram:CountrySubDivisionID>
+                <ram:BuildingNumber>777/777 </ram:BuildingNumber>
+              </ram:PostalTradeAddress>
+            </ram:SellerTradeParty>
+            <ram:BuyerTradeParty>
+                <ram:Name>บริษัททำดีจำกัด</ram:Name>
+              <ram:SpecifiedTaxRegistration>
+                    <ram:ID schemeID="TXID">222222222222200000</ram:ID>
+                </ram:SpecifiedTaxRegistration>
+              <ram:DefinedTradeContact>
+            <ram:EmailURIUniversalCommunication> 
+ <ram:URIID>patiw@example.com</ram:URIID> 
+ </ram:EmailURIUniversalCommunication> 
+
+            <ram:TelephoneUniversalCommunication> 
+ <ram:CompleteNumber>+66-97778889</ram:CompleteNumber> 
+ </ram:TelephoneUniversalCommunication> 
+
+</ram:DefinedTradeContact>
+                                 
+              <ram:PostalTradeAddress>
+                    <ram:PostcodeCode>11344</ram:PostcodeCode>
+                <ram:LineOne>หาดทุ่งวัวแล่น</ram:LineOne>
+                
+                <ram:CityName>8603</ram:CityName>
+                <ram:CitySubDivisionName>860303</ram:CitySubDivisionName>                
+                <ram:CountryID schemeID="3166-1 alpha-2">TH</ram:CountryID>
+                <ram:CountrySubDivisionID>86</ram:CountrySubDivisionID>
+                <ram:BuildingNumber>77/79</ram:BuildingNumber>
+              </ram:PostalTradeAddress>
+            </ram:BuyerTradeParty>
+			   
+        </ram:ApplicableHeaderTradeAgreement>
+        <ram:ApplicableHeaderTradeDelivery>
+          <ram:ShipToTradeParty>
+            <ram:DefinedTradeContact>
+					    <ram:PersonName>สมพร ใจงาม</ram:PersonName>
+				  </ram:DefinedTradeContact>
+            </ram:ShipToTradeParty>
+        </ram:ApplicableHeaderTradeDelivery>
+        <ram:ApplicableHeaderTradeSettlement>
+            <ram:InvoiceCurrencyCode listID="ISO 4217 3A">THB</ram:InvoiceCurrencyCode>
+            <ram:ApplicableTradeTax>
+                <ram:TypeCode>VAT</ram:TypeCode>
+                <ram:CalculatedRate>7</ram:CalculatedRate>
+                <ram:BasisAmount>9999</ram:BasisAmount>
+                <ram:CalculatedAmount>699.93</ram:CalculatedAmount>
+            </ram:ApplicableTradeTax>
+          
+          
+          <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+			     <ram:LineTotalAmount>9999</ram:LineTotalAmount>
+           <ram:TaxBasisTotalAmount>9999</ram:TaxBasisTotalAmount>
+           <ram:TaxTotalAmount>699.93</ram:TaxTotalAmount>
+           <ram:GrandTotalAmount>10698.93</ram:GrandTotalAmount>
+       </ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+        </ram:ApplicableHeaderTradeSettlement>
+		            <ram:IncludedSupplyChainTradeLineItem>
+            <ram:AssociatedDocumentLineDocument>
+                <ram:LineID>1</ram:LineID>
+            </ram:AssociatedDocumentLineDocument>
+            <ram:SpecifiedTradeProduct>
+              
+                
+              <ram:Name>สินค้าทดสอบ</ram:Name>
+            </ram:SpecifiedTradeProduct>
+            <ram:SpecifiedLineTradeAgreement>
+                <ram:GrossPriceProductTradePrice>
+                    <ram:ChargeAmount>9999</ram:ChargeAmount>
+                </ram:GrossPriceProductTradePrice>
+            </ram:SpecifiedLineTradeAgreement>
+            <ram:SpecifiedLineTradeDelivery>
+                <ram:BilledQuantity unitCode="AS">1</ram:BilledQuantity>
+            </ram:SpecifiedLineTradeDelivery>
+            <ram:SpecifiedLineTradeSettlement>
+              
+              <ram:SpecifiedTradeSettlementLineMonetarySummation>
+                    <ram:NetLineTotalAmount>9999</ram:NetLineTotalAmount>
+                    <ram:NetIncludingTaxesLineTotalAmount>10698.93</ram:NetIncludingTaxesLineTotalAmount>
+                </ram:SpecifiedTradeSettlementLineMonetarySummation>
+            </ram:SpecifiedLineTradeSettlement>
+        </ram:IncludedSupplyChainTradeLineItem>
+    </rsm:SupplyChainTradeTransaction>
+</rsm:TaxInvoice_CrossIndustryInvoice>
