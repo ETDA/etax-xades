@@ -36,8 +36,10 @@ import xades4j.properties.SigningCertificateProperty;
 import xades4j.properties.SigningTimeProperty;
 import xades4j.providers.CertificateValidationProvider;
 import xades4j.providers.impl.PKIXCertificateValidationProvider;
-//For etax seminar only
-//import xades4j.utils.FileSystemDirectoryCertStore;
+
+//For etax seminary only
+import xades4j.utils.FileSystemDirectoryCertStore;
+
 import xades4j.verification.XAdESVerificationResult;
 import xades4j.verification.XadesVerificationProfile;
 import xades4j.verification.XadesVerifier;
@@ -58,27 +60,32 @@ public class XadesBesVerifier {
 
 		NodeList nl = doc.getElementsByTagNameNS(javax.xml.crypto.dsig.XMLSignature.XMLNS, "Signature");
 		Element sigElem = (Element) nl.item(0);
-
-		Element a = (Element) sigElem.getElementsByTagName("ds:X509Certificate").item(0);
-		byte[] bencoded = javax.xml.bind.DatatypeConverter.parseBase64Binary(a.getTextContent());
+		Element certElem = (Element) sigElem.getElementsByTagName("ds:X509Certificate").item(0);
+		byte[] bencoded = javax.xml.bind.DatatypeConverter.parseBase64Binary(certElem.getTextContent());
 		InputStream in = new ByteArrayInputStream(bencoded);
 		
 		cf = CertificateFactory.getInstance("X.509");		
 		X509Certificate certSigner = (X509Certificate) cf.generateCertificate(in);
 		certChainList = getCertChain(certSigner);
 		
-		X509Certificate[] certChain = new X509Certificate[certChainList.size()];
-		certChainList.toArray(certChain);
-		
-		CollectionCertStoreParameters params = new CollectionCertStoreParameters(certChainList);
-		CertStore certStore = CertStore.getInstance("Collection", params);
 		CertificateValidationProvider provider = null;
-
+		CertStore certStore = null;
 		KeyStore ks;
+
+		if (certChainList.size() != 0) {
+			X509Certificate[] certChain = new X509Certificate[certChainList.size()];
+			certChainList.toArray(certChain);
+			
+			CollectionCertStoreParameters params = new CollectionCertStoreParameters(certChainList);
+			certStore = CertStore.getInstance("Collection", params);
+		}
+		else { 
+			//For etax seminar only
+			certStore = new FileSystemDirectoryCertStore(storeDir).getStore();
+		}
 		
 		if (storeType.equals("jks")) {
-			//For etax seminar only
-			//certStore = new FileSystemDirectoryCertStore(storeDir).getStore();
+			
 			try (FileInputStream fis = new FileInputStream(storePath)) {
 				ks = KeyStore.getInstance(storeType);
 				ks.load(fis, storePassword.toCharArray());
@@ -87,8 +94,6 @@ public class XadesBesVerifier {
 			provider = new PKIXCertificateValidationProvider(ks, false, certStore);
 
 		} else if (storeType.equals("Windows-ROOT")) {
-			//For etax seminar only
-			//certStore = new FileSystemDirectoryCertStore(storeDir).getStore();
 			ks = KeyStore.getInstance(storeType);
 			ks.load(null, null);
 			provider = new PKIXCertificateValidationProvider(ks, false, certStore);
@@ -153,7 +158,6 @@ public class XadesBesVerifier {
 				issuerCert = (X509Certificate) cf.generateCertificate(url.openStream());
 				return issuerCert;
 			} else {
-				//issuerCert = cert.;
 				return null;
 			}
 		} catch (Exception e) {
