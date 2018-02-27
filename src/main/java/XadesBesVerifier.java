@@ -36,7 +36,6 @@ import xades4j.properties.SigningCertificateProperty;
 import xades4j.properties.SigningTimeProperty;
 import xades4j.providers.CertificateValidationProvider;
 import xades4j.providers.impl.PKIXCertificateValidationProvider;
-<<<<<<< HEAD
 
 //For etax seminary only
 import xades4j.utils.FileSystemDirectoryCertStore;
@@ -159,126 +158,6 @@ public class XadesBesVerifier {
 				issuerCert = (X509Certificate) cf.generateCertificate(url.openStream());
 				return issuerCert;
 			} else {
-=======
-//For etax seminar only
-//import xades4j.utils.FileSystemDirectoryCertStore;
-import xades4j.verification.XAdESVerificationResult;
-import xades4j.verification.XadesVerificationProfile;
-import xades4j.verification.XadesVerifier;
-
-
-public class XadesBesVerifier {
-
-	private static CertificateFactory cf = null;
-	
-	public void verifyBes(String filePath, String storeType, String storePath, String storePassword, String storeDir)
-			throws Exception {
-
-		Collection<X509Certificate> certChainList;
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		factory.setNamespaceAware(true);
-		DocumentBuilder builder = factory.newDocumentBuilder();
-		Document doc = builder.parse(new FileInputStream(filePath));
-
-		NodeList nl = doc.getElementsByTagNameNS(javax.xml.crypto.dsig.XMLSignature.XMLNS, "Signature");
-		Element sigElem = (Element) nl.item(0);
-
-		Element a = (Element) sigElem.getElementsByTagName("ds:X509Certificate").item(0);
-		byte[] bencoded = javax.xml.bind.DatatypeConverter.parseBase64Binary(a.getTextContent());
-		InputStream in = new ByteArrayInputStream(bencoded);
-		
-		cf = CertificateFactory.getInstance("X.509");		
-		X509Certificate certSigner = (X509Certificate) cf.generateCertificate(in);
-		certChainList = getCertChain(certSigner);
-		
-		X509Certificate[] certChain = new X509Certificate[certChainList.size()];
-		certChainList.toArray(certChain);
-		
-		CollectionCertStoreParameters params = new CollectionCertStoreParameters(certChainList);
-		CertStore certStore = CertStore.getInstance("Collection", params);
-		CertificateValidationProvider provider = null;
-
-		KeyStore ks;
-		
-		if (storeType.equals("jks")) {
-			//For etax seminar only
-			//certStore = new FileSystemDirectoryCertStore(storeDir).getStore();
-			try (FileInputStream fis = new FileInputStream(storePath)) {
-				ks = KeyStore.getInstance(storeType);
-				ks.load(fis, storePassword.toCharArray());
-			}
-
-			provider = new PKIXCertificateValidationProvider(ks, false, certStore);
-
-		} else if (storeType.equals("Windows-ROOT")) {
-			//For etax seminar only
-			//certStore = new FileSystemDirectoryCertStore(storeDir).getStore();
-			ks = KeyStore.getInstance(storeType);
-			ks.load(null, null);
-			provider = new PKIXCertificateValidationProvider(ks, false, certStore);
-		}
-				
-		XadesVerificationProfile profile = new XadesVerificationProfile(provider);
-		XadesVerifier verifier = profile.newVerifier();
-
-		/**/
-		XAdESVerificationResult r = verifier.verify(sigElem, null);
-
-		System.out.println("Signature form: " + r.getSignatureForm());
-		System.out.println("Algorithm URI: " + r.getSignatureAlgorithmUri());
-		System.out.println("Signed objects: " + r.getSignedDataObjects().size());
-		System.out.println("Qualifying properties: " + r.getQualifyingProperties().all().size());
-
-		for (QualifyingProperty qp : r.getQualifyingProperties().all()) {
-			if ("SigningCertificate".equals(qp.getName())) {
-				Collection<X509Certificate> certs = ((SigningCertificateProperty) qp).getsigningCertificateChain();
-				certs.forEach((cert) -> {
-					System.out.println(cert.getSubjectDN());
-				});
-			} else if ("SigningTime".equals(qp.getName())) {
-				System.out.println(
-						qp.getName() + ": " + ((SigningTimeProperty) qp).getSigningTime().getTime().toString());
-			} else if ("SignatureTimeStamp".equals(qp.getName())) {
-				System.out.println(qp.getName() + ": " + ((SignatureTimeStampProperty) qp).getTime().toString());
-			} else {
-				System.out.println("QP name: " + qp.getName());
-			}
-		}
-	}
-	
-	private ArrayList<X509Certificate> getCertChain(X509Certificate cert) {
-		
-		ArrayList<X509Certificate> certChain = new ArrayList<X509Certificate>();
-
-		try {
-			certChain.add(cert);
-			while (!cert.getSubjectDN().equals(cert.getIssuerDN())) {
-				cert = getAiaIssuerCert(cert);
-				if (cert == null) {
-					break;
-				}
-				certChain.add(cert);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return certChain;
-	}
-
-	private X509Certificate getAiaIssuerCert(X509Certificate cert) {
-		
-		X509Certificate issuerCert = null;
-		String issuerUrl = null;
-
-		try {
-			issuerUrl = getAccessLocation(cert, org.bouncycastle.asn1.x509.X509ObjectIdentifiers.id_ad_caIssuers);
-			if (issuerUrl != null) {
-				URL url = new URL(issuerUrl);
-				issuerCert = (X509Certificate) cf.generateCertificate(url.openStream());
-				return issuerCert;
-			} else {
-				//issuerCert = cert.;
->>>>>>> refs/remotes/origin/dev
 				return null;
 			}
 		} catch (Exception e) {
