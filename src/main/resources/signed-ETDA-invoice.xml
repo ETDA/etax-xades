@@ -130,11 +130,11 @@
             </ram:SpecifiedLineTradeSettlement>
         </ram:IncludedSupplyChainTradeLineItem>
     </rsm:SupplyChainTradeTransaction>
-<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-4ced4ef5-77dc-4140-bca1-8484b368eef4">
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-69b3d670-04e4-419f-8d45-938ea867f571">
 <ds:SignedInfo>
 <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
 <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"></ds:SignatureMethod>
-<ds:Reference Id="xmldsig-4ced4ef5-77dc-4140-bca1-8484b368eef4-ref0" URI="">
+<ds:Reference Id="xmldsig-69b3d670-04e4-419f-8d45-938ea867f571-ref0" URI="">
 <ds:Transforms>
 <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
 </ds:Transforms>
@@ -142,44 +142,51 @@
 <ds:DigestValue>eBvSNIqSOCUHqU+DQ4Q3kaetK3FD593qA21uchK8sbYo1JPtNKGWq5SPlgTBGXL8m2kAPqpOsBxs
 bv1/g4C9yQ==</ds:DigestValue>
 </ds:Reference>
-<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-4ced4ef5-77dc-4140-bca1-8484b368eef4-signedprops">
+<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-69b3d670-04e4-419f-8d45-938ea867f571-signedprops">
 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"></ds:DigestMethod>
-<ds:DigestValue>vk1QIKb6Jv3t/f6wwWKlTPyqv8ji4twxH49urPkJH8xEzkr/gXhsopa5jz/LR+eH8hZhhN0U5z61
-fhuezTGXRw==</ds:DigestValue>
+<ds:DigestValue>IdBum5ewEap3giMVokjxN0mapim4xWSEdV1f0NyS4lW3hC66NiphHuuQlYF2qe2cYNUSwxD3YexX
+jQRcMdpp1A==</ds:DigestValue>
 </ds:Reference>
 </ds:SignedInfo>
-<ds:SignatureValue Id="xmldsig-4ced4ef5-77dc-4140-bca1-8484b368eef4-sigvalue">
-LDsUAVVGnc5ubEouyeV8GkLQMz49DSOxHIPbV3sBvyNtQ7jKDfqhFQ/ScVhH5SztELosmybmukw0
-NT4F8TanUjClk52xbJj8tEvG0M959LPnKU5eGYqL+78nStzf3AohbxciyAUDQ6Kn4kD2hpRFjAcC
-jXcOg1kXpzkj8DcPajU=
+<ds:SignatureValue Id="xmldsig-69b3d670-04e4-419f-8d45-938ea867f571-sigvalue">
+iwpxfwEnUw1rP5q6QTyEPYm5nseJTmogWfHDNbb5qkJR78HHhVKHema4I6xI7BV4pCGMNoG+7d/x
+wnI2yxpu84+i/h3dkxtpZQH4qL36/6ngG2TEfaxS4yHw1qEKY3MwUrGt39aUardBt4/673J2VUEU
+8DzUCWVnF3Ly9stzdai4ykWjD9Hn08aLZcc72zWHyYfFMz1iWwbzY8W2p4vwA5BalNpWAsebm4zK
+PKIQuZ8+dM/2e+mB1TyLoBLMn/bl7a8RBTGarJdsIVUfU8xC0suct2AtvinkEgH8+Ju8kBfzWleC
+vIRLfUJkCtvrmcnArieTmZoZRvVyp8290Yky5g==
 </ds:SignatureValue>
 <ds:KeyInfo>
 <ds:X509Data>
 <ds:X509Certificate>
-MIIEpDCCAoygAwIBAgIICQ8e5yN80vswDQYJKoZIhvcNAQENBQAwgbUxCzAJBgNVBAYTAnRoMT0w
+MIIFrjCCA5agAwIBAgIIew6XEhSld4EwDQYJKoZIhvcNAQELBQAwgbUxCzAJBgNVBAYTAnRoMT0w
 OwYDVQQKDDRNaW5pc3RyeSBvZiBJbmZvcm1hdGlvbiBhbmQgQ29tbXVuaWNhdGlvbiBUZWNobm9s
 b2d5MUkwRwYDVQQLDEBFbGVjdHJvbmljIFRyYW5zYWN0aW9ucyBEZXZlbG9wbWVudCBBZ2VuY3kg
-KFB1YmxpYyBPcmdhbml6YXRpb24pMRwwGgYDVQQDDBNUZURBIENBIGZvciBUZXN0aW5nMB4XDTE4
-MDIxNjA4NDI1OVoXDTIwMDIxNjA4NDI1OVowezELMAkGA1UEBhMCVEgxSTBHBgNVBAoMQEVsZWN0
-cm9uaWMgVHJhbnNhY3Rpb25zIERldmVsb3BtZW50IEFnZW5jeSAoUHVibGljIE9yZ2FuaXphdGlv
-bikxITAfBgNVBAMMGENvZGUgU2lnbmluZyBDZXJ0aWZpY2F0ZTCBnzANBgkqhkiG9w0BAQEFAAOB
-jQAwgYkCgYEAxyfKh99ZU4GLkSBI0slzAzFnRCEPoP4nZhKh/VKEWOle8pvxNRAEMp6uqMF6zX63
-g4Sf/ewBFleEfCxm9YcThb7xaFH0H6KnGx7XOEz2SABetS6ksvKYOTztsWelM4kbkZCbb8VY0YM5
-rIr4fyPqFiHnHzVi7QLZy1BnLs89q60CAwEAAaN1MHMwHQYDVR0OBBYEFDI5KtaSeonsWNNs+B94
-JnViqpQqMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUw7M9c+QxW38JHlzBhP71WNfouZQwDgYD
-VR0PAQH/BAQDAgWgMBMGA1UdJQQMMAoGCCsGAQUFBwMBMA0GCSqGSIb3DQEBDQUAA4ICAQAo5/9Z
-rK/sEgaAY/BswhV1EmsWVS55hgUGO5DEgoSCjgCCTv4nbCB3zsq+47epZhD9DSzsWoLzE6KESK24
-vlwcy2C2kRYSDmgC1lVxJLvxK/t8dfeYDFHt/Qq7gKX7Czfb74iWpx0jexBxFLQDXXsmdy57u1NO
-EIOc75gJbD/VMOZLrscDxcYy4Z4fPEI7cH+p7TC9Qcy6K5s3tCwww7QaeO4D8julo4wnJpig84oy
-RS2HGKEFWedfjJS1NZ4y43iXcgNndEEhexlVRBXj9H3H9MmVR3Pk3634uFfLeUfYetQbojQcPg0l
-FKvlUaexoDpUFtD8AiVXdHBfD3YgMhp0htxZNpGf5tL+VIKaOQUTwlLzHMfO/2DrYwO7lg8TsOQL
-UiWBz6SPFGSVfNxZlF6B47FcxK+LLas8go/tfGeRRajg4u5/7fgCKWp2m4F3jhtpYzHAXZq6Gmce
-PgW5uEddERrHij5WqjolZkQBclxs47swEEujUBEv28YeoWc6B2RycLM73YGDlo/uKjqXWkAzkzN5
-bdnorIqMy4ZBwi20bdcxDt9S7eOdZBKu3tjVl/UfAU8J8PUiyBWZlBN+ETBfIpXTRSRZu77aWiUx
-6haRTSh5xK+0exSttv1RkOprn5xMvYbnVc/PoJTpsVXjTHYA+Bu7l7HiarMQlqoQBQW/hw==
+KFB1YmxpYyBPcmdhbml6YXRpb24pMRwwGgYDVQQDDBNUZURBIENBIGZvciBUZXN0aW5nMB4XDTE5
+MDcwNDA1MDY1MFoXDTIyMDcwNDA1MDY1MFowZTELMAkGA1UEBhMCVEgxMzAxBgNVBAoMKkVsZWN0
+cm9uaWMgVHJhbnNhY3Rpb25zIERldmVsb3BtZW50IEFnZW5jeTEhMB8GA1UEAwwYQ29kZSBTaWdu
+aW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoVWH2z88nV0+
+GuxpyHKZjNWxTv7syQqwL+FiF2KErwdI9rRSKFz5GyOhB5N6Nzjh0AflcfUGrOa+AbjNi+5MGUC3
+uL2ugo7jMXx2Rwp90aHhGU8jhE/Dx6pdUiQSd6ZLyCTYzIrb4okgDRzsJTe3pFfnM0ScspiU2GMR
+CMmQgPYWob6BFPgzqIcYK99f82CENg3PFlm4bUWTgvVgF0TTevjLvH8Dx8LvnORW05Hk+jHWbPQu
+HtarmubUowFv9N1EboBEbFAPxhOp67vctzuoDfOtLaC0unfkXBxzSpnpKg7ZDSEbT4C6hDMqXaAG
+ZxRWtE6ggVQfjzICOs8ZhV+zkwIDAQABo4IBDzCCAQswVQYIKwYBBQUHAQEESTBHMEUGCCsGAQUF
+BzAChjlodHRwOi8vcmVwby10ZXN0LnRlZGEudGgvY2VydC9UZURBQ0Fmb3JUZXN0aW5nLmNhY2Vy
+dC5jcnQwHQYDVR0OBBYEFBnP8q2USQRJ1oTlTds9irSSivl7MAwGA1UdEwEB/wQCMAAwHwYDVR0j
+BBgwFoAUw7M9c+QxW38JHlzBhP71WNfouZQwQgYDVR0fBDswOTA3oDWgM4YxaHR0cDovL3JlcG8t
+dGVzdC50ZWRhLnRoL2NybC9UZURBQ0Fmb3JUZXN0aW5nLmNybDALBgNVHQ8EBAMCBPAwEwYDVR0l
+BAwwCgYIKwYBBQUHAwMwDQYJKoZIhvcNAQELBQADggIBACrFj0Ee4paSEBzmskqyLatVvbnDfUUf
+DMMkQrSGcD2l2lNaorAtcBZeVJTRMt+doJTNPwpAFbW3rbbAAX+PKAn5M8F2dcj0W/Q6dIw1pQyu
+RJIBgJ7BwXq7fwbEV3C1AUV3EXTGND4hz7LYRqCIuLi6ODdT3/HBQlEBQtNhKLBBciE81mWKvaQ1
+g/hAbPZOSDW7WBEw8Kjj1vbPS0lviar8TurRwbwDlYMk6NzpSGPJYUrxjYw54ZJx/1QngKGK6wsZ
+iV0sj5JbbfxjTwWOhEl2LdulQJ8KNZv+ajQMZqtEeAreAHLyGSG6xgOpPV9aHP9LDTR/d5qi3JB5
+fwMOvEsWWvzoKzvilR6WO3hYL8qQi/Y4C7oYMkjxVBAALXi2PH4cZSA26SkR2gHQ8FMO1o+StqkB
+Bjkrtdyhvr+PxijFSh25T3rLlAPBDCALSUPRdLg848k07CleGBzDDETNsFnUhiZXCzD6TWEKqdMV
+ItzXCuCe+bCX8/wvsVC48chMdxjVHLR3P8csyK+tPS+Te9ipsI3ZgIoDWilNJhKMyaQbmI+zHFzB
+VVE9cVMkFsGOWh0lKscQA3k1CnhvfIsppyz/ZK6sj7/7Q5+is/4ay5vGhgSPXVhN0kCW5u+esGou
+VPJLMfqvwhh4V1a+9sQtsRDugqPhzk00/DrI0byUjl65
 </ds:X509Certificate>
 </ds:X509Data>
 </ds:KeyInfo>
-<ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#" Target="#xmldsig-4ced4ef5-77dc-4140-bca1-8484b368eef4"><xades:SignedProperties Id="xmldsig-4ced4ef5-77dc-4140-bca1-8484b368eef4-signedprops"><xades:SignedSignatureProperties><xades:SigningTime>2018-02-23T12:05:22.997+07:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"></ds:DigestMethod><ds:DigestValue>wR3BKPmKP0z4+uaaZUiEMxkEm/yPNlPWp/GxaSgjMiM55jC6j0ugJDpJRrGWICkFMc/AOZw+TfGt
-OeU6G7dqVg==</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TeDA CA for Testing,OU=Electronic Transactions Development Agency (Public Organization),O=Ministry of Information and Communication Technology,C=th</ds:X509IssuerName><ds:X509SerialNumber>652774449073672955</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+<ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#" Target="#xmldsig-69b3d670-04e4-419f-8d45-938ea867f571"><xades:SignedProperties Id="xmldsig-69b3d670-04e4-419f-8d45-938ea867f571-signedprops"><xades:SignedSignatureProperties><xades:SigningTime>2019-07-04T16:14:02.934+07:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"></ds:DigestMethod><ds:DigestValue>1r8x/T+ReH+ehYxWyrRkILA2U0whmsLYLrewFjuhiTGSLQX7RchTPF0eZJvhPihlaIGa7xBMzS58
+iILPkh71MA==</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TeDA CA for Testing,OU=Electronic Transactions Development Agency (Public Organization),O=Ministry of Information and Communication Technology,C=th</ds:X509IssuerName><ds:X509SerialNumber>8867190820250679169</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
 </ds:Signature></rsm:TaxInvoice_CrossIndustryInvoice>
