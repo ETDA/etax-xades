@@ -131,9 +131,9 @@ public class XadesBesSigner {
 	}
 
 	/**
-	 * Generate the signature and output a single signed file using the
-	 * enveloped structure This means that the signature is within the signed
-	 * XML This method signs the root node, not an ID
+	 * Generate the signature and output a single signed file using the enveloped
+	 * structure This means that the signature is within the signed XML This method
+	 * signs the root node, not an ID
 	 * 
 	 * @param inputPath
 	 * @param outputPath
@@ -172,7 +172,7 @@ public class XadesBesSigner {
 		} else {
 			if (elementToSign.getParentNode().getNodeType() != Node.DOCUMENT_NODE) {
 				bos.close();
-				throw new IllegalArgumentException("Element without Id must be the document root");
+				throw new IllegalArgumentException("Element without Id must be the document root.");
 			}
 			refUri = "";
 		}

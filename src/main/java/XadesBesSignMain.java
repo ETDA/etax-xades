@@ -20,14 +20,15 @@ public class XadesBesSignMain {
 	private static String pkcs12Path;
 	private static String pkcs12Password;
 
+	// Path of config file
 	private static final String CONFIG_FILE_PATH = "src/main/resources/conf/etax-xades.properties";
 
-	//static Logger logger = Logger.getLogger(XadesBesSignMain.class);
-	
+	// static Logger logger = Logger.getLogger(XadesBesSignMain.class);
+
 	public static void main(String[] args) {
 
-		//BasicConfigurator.configure();
-		
+		// BasicConfigurator.configure();
+
 		XadesBesSigner signer = new XadesBesSigner();
 
 		try {
