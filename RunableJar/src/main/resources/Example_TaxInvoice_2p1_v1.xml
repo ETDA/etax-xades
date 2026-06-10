@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../data/standard/TaxInvoice_Schematron_2p1.sch"  type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<rsm:TaxInvoice_CrossIndustryInvoice
+	xmlns:ram="urn:etda:uncefact:data:standard:TaxInvoice_ReusableAggregateBusinessInformationEntity:2"
+	xmlns:rsm="urn:etda:uncefact:data:standard:TaxInvoice_CrossIndustryInvoice:2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:etda:uncefact:data:standard:TaxInvoice_CrossIndustryInvoice:2 file:../data/standard/TaxInvoice_CrossIndustryInvoice_2p1.xsd">
+	<rsm:ExchangedDocumentContext>
+		<ram:GuidelineSpecifiedDocumentContextParameter>
+			<ram:ID schemeAgencyID="ETDA" schemeVersionID="2.1">ER3-2560</ram:ID>
+		</ram:GuidelineSpecifiedDocumentContextParameter>
+	</rsm:ExchangedDocumentContext>
+	<rsm:ExchangedDocument>
+		<ram:ID>RDTIV0575526000058001</ram:ID>
+		<ram:Name>ใบกำกับภาษี</ram:Name>
+		<ram:TypeCode>388</ram:TypeCode>
+		<ram:IssueDateTime>2016-09-12T19:19:25.0</ram:IssueDateTime>
+		<ram:PurposeCode>TIVC01</ram:PurposeCode>
+		<ram:CreationDateTime>2016-09-12T15:51:26.0</ram:CreationDateTime>
+		<ram:IncludedNote>
+			<ram:Subject>หมายเหตุ</ram:Subject>
+		</ram:IncludedNote>
+	</rsm:ExchangedDocument>
+	<rsm:SupplyChainTradeTransaction>
+		<ram:ApplicableHeaderTradeAgreement>
+			<ram:SellerTradeParty>
+
+				<ram:Name>บริษัท ร่วมสมัยธุรกรรมอิเล็กทรอนิกส์ จำกัด</ram:Name>
+
+				<ram:SpecifiedTaxRegistration>
+					<ram:ID schemeID="NIDN" schemeAgencyID="RD">3333333333334</ram:ID>
+				</ram:SpecifiedTaxRegistration>
+				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>10310</ram:PostcodeCode>
+					<ram:CityName>1017</ram:CityName>
+					<ram:CitySubDivisionName>101701</ram:CitySubDivisionName>
+					<ram:CountryID schemeID="3166-1 alpha-2">TH</ram:CountryID>
+					<ram:CountrySubDivisionID>10</ram:CountrySubDivisionID>
+					<ram:BuildingNumber>3/34</ram:BuildingNumber>
+				</ram:PostalTradeAddress>
+			</ram:SellerTradeParty>
+			<ram:BuyerTradeParty>
+				<ram:Name>ธารา ยืนขำ</ram:Name>
+				<ram:SpecifiedTaxRegistration>
+					<ram:ID schemeID="NIDN">1104599001271</ram:ID>
+				</ram:SpecifiedTaxRegistration>
+				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>10330</ram:PostcodeCode>
+					<ram:LineThree>จุฬาซอย 10</ram:LineThree>
+					<ram:StreetName>พระราม 6</ram:StreetName>
+					<ram:CityName>1004</ram:CityName>
+					<ram:CitySubDivisionName>100402</ram:CitySubDivisionName>
+					<ram:CountryID schemeID="3166-1 alpha-2">TH</ram:CountryID>
+					<ram:CountrySubDivisionID>10</ram:CountrySubDivisionID>
+					<ram:BuildingNumber>799/89</ram:BuildingNumber>
+				</ram:PostalTradeAddress>
+			</ram:BuyerTradeParty>
+			<ram:AdditionalReferencedDocument>
+				<ram:IssuerAssignedID>1234</ram:IssuerAssignedID>
+				<ram:IssueDateTime>2016-09-12T19:19:25.0</ram:IssueDateTime>
+				<ram:ReferenceTypeCode>T06</ram:ReferenceTypeCode>
+			</ram:AdditionalReferencedDocument>
+		</ram:ApplicableHeaderTradeAgreement>
+		<ram:ApplicableHeaderTradeDelivery>
+			<ram:ShipToTradeParty>
+				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>10330</ram:PostcodeCode>
+					<ram:LineThree>จุฬาซอย 10</ram:LineThree>
+					<ram:StreetName>พระราม 6</ram:StreetName>
+					<ram:CityName>1004</ram:CityName>
+					<ram:CitySubDivisionName>100402</ram:CitySubDivisionName>
+					<ram:CountryID schemeID="3166-1 alpha-2">TH</ram:CountryID>
+					<ram:CountrySubDivisionID>sdasdg</ram:CountrySubDivisionID>
+					<ram:BuildingNumber>799/89</ram:BuildingNumber>
+				</ram:PostalTradeAddress>
+			</ram:ShipToTradeParty>
+		</ram:ApplicableHeaderTradeDelivery>
+		<ram:ApplicableHeaderTradeSettlement>
+			<ram:InvoiceCurrencyCode listID="ISO 4217 3A">THB</ram:InvoiceCurrencyCode>
+			<ram:ApplicableTradeTax>
+				<ram:TypeCode>VAT</ram:TypeCode>
+				<ram:CalculatedRate>7</ram:CalculatedRate>
+				<ram:BasisAmount>63050</ram:BasisAmount>
+				<ram:CalculatedAmount>4413.50</ram:CalculatedAmount>
+			</ram:ApplicableTradeTax>
+			<ram:SpecifiedTradeAllowanceCharge>
+				<ram:ChargeIndicator>false</ram:ChargeIndicator>
+				<ram:ActualAmount>2500</ram:ActualAmount>
+				<ram:ReasonCode>95</ram:ReasonCode>
+				<ram:Reason>ส่วนลดจากราคาปกติ</ram:Reason>
+			</ram:SpecifiedTradeAllowanceCharge>
+			<ram:SpecifiedTradeAllowanceCharge>
+				<ram:ChargeIndicator>false</ram:ChargeIndicator>
+				<ram:ActualAmount>0</ram:ActualAmount>
+			</ram:SpecifiedTradeAllowanceCharge>
+			<ram:SpecifiedTradePaymentTerms>
+				<ram:Description>dd</ram:Description>
+				<ram:DueDateDateTime>2016-09-12T15:51:26.0</ram:DueDateDateTime>
+				<ram:TypeCode>49</ram:TypeCode>
+			</ram:SpecifiedTradePaymentTerms>
+			<ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+				<ram:LineTotalAmount>63050</ram:LineTotalAmount>
+				<ram:AllowanceTotalAmount>2500</ram:AllowanceTotalAmount>
+				<ram:TaxBasisTotalAmount>60550</ram:TaxBasisTotalAmount>
+				<ram:TaxTotalAmount>4238.50</ram:TaxTotalAmount>
+				<ram:GrandTotalAmount>64788.50</ram:GrandTotalAmount>
+			</ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+		</ram:ApplicableHeaderTradeSettlement>
+		<ram:IncludedSupplyChainTradeLineItem>
+			<ram:AssociatedDocumentLineDocument>
+				<ram:LineID>1</ram:LineID>
+			</ram:AssociatedDocumentLineDocument>
+			<ram:SpecifiedTradeProduct>
+				<ram:ID>PR00001</ram:ID>
+				<ram:Name>ดินสอเขียนคิ้ว</ram:Name>
+				<ram:IndividualTradeProductInstance>
+					<ram:ExpiryDateTime>1970-01-01T07:00:00.0</ram:ExpiryDateTime>
+				</ram:IndividualTradeProductInstance>
+			</ram:SpecifiedTradeProduct>
+			<ram:SpecifiedLineTradeAgreement>
+				<ram:GrossPriceProductTradePrice>
+					<ram:ChargeAmount>359</ram:ChargeAmount>
+				</ram:GrossPriceProductTradePrice>
+			</ram:SpecifiedLineTradeAgreement>
+			<ram:SpecifiedLineTradeDelivery>
+				<ram:BilledQuantity unitCode="PIECE">150</ram:BilledQuantity>
+			</ram:SpecifiedLineTradeDelivery>
+			<ram:SpecifiedLineTradeSettlement>
+				<ram:ApplicableTradeTax>
+					<ram:TypeCode>VAT</ram:TypeCode>
+					<ram:CalculatedRate>7</ram:CalculatedRate>
+					<ram:BasisAmount>52350</ram:BasisAmount>
+					<ram:CalculatedAmount>3664.50</ram:CalculatedAmount>
+				</ram:ApplicableTradeTax>
+				<ram:SpecifiedTradeAllowanceCharge>
+					<ram:ChargeIndicator>false</ram:ChargeIndicator>
+					<ram:ActualAmount>1500.00</ram:ActualAmount>
+					<ram:ReasonCode>95</ram:ReasonCode>
+					<ram:Reason>ส่วนลดจากราคาปกติ</ram:Reason>
+				</ram:SpecifiedTradeAllowanceCharge>
+				<ram:SpecifiedTradeSettlementLineMonetarySummation>
+					<ram:TaxTotalAmount>3664.5</ram:TaxTotalAmount>
+					<ram:NetLineTotalAmount currencyID="THB">52350</ram:NetLineTotalAmount>
+					<ram:NetIncludingTaxesLineTotalAmount currencyID="THB"
+						>56014.5</ram:NetIncludingTaxesLineTotalAmount>
+				</ram:SpecifiedTradeSettlementLineMonetarySummation>
+			</ram:SpecifiedLineTradeSettlement>
+
+		</ram:IncludedSupplyChainTradeLineItem>
+		<ram:IncludedSupplyChainTradeLineItem>
+			<ram:AssociatedDocumentLineDocument>
+				<ram:LineID>2</ram:LineID>
+			</ram:AssociatedDocumentLineDocument>
+			<ram:SpecifiedTradeProduct>
+				<ram:ID>ST20061602</ram:ID>
+				<ram:Name>บรัชออน</ram:Name>
+				<ram:IndividualTradeProductInstance>
+					<ram:BatchID>1/8</ram:BatchID>
+					<ram:ExpiryDateTime>2016-06-30T07:00:00.0</ram:ExpiryDateTime>
+				</ram:IndividualTradeProductInstance>
+			</ram:SpecifiedTradeProduct>
+			<ram:SpecifiedLineTradeAgreement>
+				<ram:GrossPriceProductTradePrice>
+					<ram:ChargeAmount>39</ram:ChargeAmount>
+				</ram:GrossPriceProductTradePrice>
+			</ram:SpecifiedLineTradeAgreement>
+			<ram:SpecifiedLineTradeDelivery>
+				<ram:BilledQuantity unitCode="PIECE">300</ram:BilledQuantity>
+			</ram:SpecifiedLineTradeDelivery>
+			<ram:SpecifiedLineTradeSettlement>
+				<ram:ApplicableTradeTax>
+					<ram:TypeCode>VAT</ram:TypeCode>
+					<ram:CalculatedRate>7</ram:CalculatedRate>
+					<ram:BasisAmount>10700</ram:BasisAmount>
+					<ram:CalculatedAmount>749</ram:CalculatedAmount>
+				</ram:ApplicableTradeTax>
+				<ram:SpecifiedTradeAllowanceCharge>
+					<ram:ChargeIndicator>false</ram:ChargeIndicator>
+					<ram:ActualAmount>1000.00</ram:ActualAmount>
+					<ram:ReasonCode>95</ram:ReasonCode>
+					<ram:Reason>ส่วนลดจากราคาปกติ</ram:Reason>
+				</ram:SpecifiedTradeAllowanceCharge>
+
+				<ram:SpecifiedTradeSettlementLineMonetarySummation>
+					<ram:TaxTotalAmount>749</ram:TaxTotalAmount>
+					<ram:NetLineTotalAmount currencyID="THB">10700</ram:NetLineTotalAmount>
+					<ram:NetIncludingTaxesLineTotalAmount currencyID="THB"
+						>11449</ram:NetIncludingTaxesLineTotalAmount>
+				</ram:SpecifiedTradeSettlementLineMonetarySummation>
+
+			</ram:SpecifiedLineTradeSettlement>
+		</ram:IncludedSupplyChainTradeLineItem>
+	</rsm:SupplyChainTradeTransaction>
+</rsm:TaxInvoice_CrossIndustryInvoice>

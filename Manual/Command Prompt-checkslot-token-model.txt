@@ -1,0 +1,137 @@
+
+C:\Program Files\OpenSC Project\OpenSC\tools>dir/w
+ Volume in drive C is Windows
+ Volume Serial Number is 7240-C994
+
+ Directory of C:\Program Files\OpenSC Project\OpenSC\tools
+
+[.]                   [..]                  cardos-tool.exe       dtrust-tool.exe       egk-tool.exe
+eidenv.exe            goid-tool.exe         iasecc-tool.exe       openpgp-tool.exe      opensc-asn1.exe
+opensc-explorer.exe   opensc-notify.exe     opensc-tool.exe       opensc.dll            pkcs11-register.exe
+pkcs11-tool.exe       pkcs15-crypt.exe      pkcs15-tool.exe
+              16 File(s)      4,566,416 bytes
+               2 Dir(s)  36,768,088,064 bytes free
+
+C:\Program Files\OpenSC Project\OpenSC\tools>"C:\Program Files\OpenSC Project\OpenSC\tools\pkcs11-tool.exe" `
+error: invalid option(s) given
+Aborting.
+
+C:\Program Files\OpenSC Project\OpenSC\tools>  --module "C:\Windows\System32\eTPKCS11.dll" `
+'--module' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\OpenSC Project\OpenSC\tools>pkcs11-tool.exe --module "C:\Windows\System32\eTPKCS11.dll" --list-slots
+Available slots:
+Slot 0 (0x0): Aladdin Token JC 0
+  token label        : SIMPLEFOODS
+  token manufacturer : SafeNet, Inc.
+  token model        : eToken
+  token flags        : login required, rng, token initialized, PIN initialized, other flags=0x200
+  hardware version   : 4.30
+  firmware version   : 0.0
+  serial num         : 01f1fbea
+  pin min/max        : 6/20
+  uri                : pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS
+Slot 1 (0x1):
+  (empty)
+Slot 2 (0x2):
+  (empty)
+Slot 3 (0x3):
+  (empty)
+Slot 4 (0x4):
+  (empty)
+Slot 5 (0x5):
+  (empty)
+Slot 6 (0x6):
+  (empty)
+Slot 7 (0x7):
+  (empty)
+
+C:\Program Files\OpenSC Project\OpenSC\tools>pkcs11-tool.exe --module "C:\Windows\System32\eTPKCS11.dll" `
+error: invalid option(s) given
+Aborting.
+
+C:\Program Files\OpenSC Project\OpenSC\tools>  --slot 0 `
+'--slot' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\OpenSC Project\OpenSC\tools>  --list-objects `
+'--list-objects' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\OpenSC Project\OpenSC\tools>pkcs11-tool.exe --module "C:\Windows\System32\eTPKCS11.dll" --slot 0 --list-objects --type cert
+Certificate Object; type = X.509 cert
+  label:      DF76B6782EA1831B
+  ID:         31:a8:3e:b0:8a:7d:d9:df:1e:8c:f8:23:37:e4:c6:99:9e:bc:bc:9b
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;id=%31%a8%3e%b0%8a%7d%d9%df%1e%8c%f8%23%37%e4%c6%99%9e%bc%bc%9b;object=DF76B6782EA1831B;type=cert
+Certificate Object; type = X.509 cert
+  label:
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;object=;type=cert
+Certificate Object; type = X.509 cert
+  label:
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;object=;type=cert
+
+C:\Program Files\OpenSC Project\OpenSC\tools>D:\User\Downloads\XadesBesSign_PKCS11
+'D:\User\Downloads\XadesBesSign_PKCS11' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\OpenSC Project\OpenSC\tools>pkcs11-tool.exe --module "C:\Windows\System32\eTPKCS11.dll" --slot 0 --list-objects --type cert
+Certificate Object; type = X.509 cert
+  label:      DF76B6782EA1831B
+  ID:         31:a8:3e:b0:8a:7d:d9:df:1e:8c:f8:23:37:e4:c6:99:9e:bc:bc:9b
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;id=%31%a8%3e%b0%8a%7d%d9%df%1e%8c%f8%23%37%e4%c6%99%9e%bc%bc%9b;object=DF76B6782EA1831B;type=cert
+Certificate Object; type = X.509 cert
+  label:
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;object=;type=cert
+Certificate Object; type = X.509 cert
+  label:
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;object=;type=cert
+Certificate Object; type = X.509 cert
+  label:      05294C8DAC33654A
+  ID:         ae:45:57:6e:5b:c8:47:f3:5d:d1:13:97:bd:9d:6b:be:83:77:79:bc
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;id=%ae%45%57%6e%5b%c8%47%f3%5d%d1%13%97%bd%9d%6b%be%83%77%79%bc;object=05294C8DAC33654A;type=cert
+
+C:\Program Files\OpenSC Project\OpenSC\tools>pkcs11-tool --module "C:\Windows\System32\eTPKCS11.dll" --list-slots
+Available slots:
+Slot 0 (0x0): Aladdin Token JC 0
+  token label        : SIMPLEFOODS
+  token manufacturer : SafeNet, Inc.
+  token model        : eToken
+  token flags        : login required, rng, token initialized, PIN initialized, other flags=0x200
+  hardware version   : 4.30
+  firmware version   : 0.0
+  serial num         : 01f1fbea
+  pin min/max        : 6/20
+  uri                : pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS
+Slot 1 (0x1):
+  (empty)
+Slot 2 (0x2):
+  (empty)
+Slot 3 (0x3):
+  (empty)
+Slot 4 (0x4):
+  (empty)
+Slot 5 (0x5):
+  (empty)
+Slot 6 (0x6):
+  (empty)
+Slot 7 (0x7):
+  (empty)
+
+C:\Program Files\OpenSC Project\OpenSC\tools>pkcs11-tool.exe --module "C:\Windows\System32\eTPKCS11.dll" --slot 0 --list-objects --type cert
+Certificate Object; type = X.509 cert
+  label:      DF76B6782EA1831B
+  ID:         31:a8:3e:b0:8a:7d:d9:df:1e:8c:f8:23:37:e4:c6:99:9e:bc:bc:9b
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;id=%31%a8%3e%b0%8a%7d%d9%df%1e%8c%f8%23%37%e4%c6%99%9e%bc%bc%9b;object=DF76B6782EA1831B;type=cert
+Certificate Object; type = X.509 cert
+  label:
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;object=;type=cert
+Certificate Object; type = X.509 cert
+  label:
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;object=;type=cert
+Certificate Object; type = X.509 cert
+  label:      05294C8DAC33654A
+  ID:         ae:45:57:6e:5b:c8:47:f3:5d:d1:13:97:bd:9d:6b:be:83:77:79:bc
+  uri:        pkcs11:model=eToken;manufacturer=SafeNet%2c%20Inc.;serial=01f1fbea;token=SIMPLEFOODS;id=%ae%45%57%6e%5b%c8%47%f3%5d%d1%13%97%bd%9d%6b%be%83%77%79%bc;object=05294C8DAC33654A;type=cert
+
+C:\Program Files\OpenSC Project\OpenSC\tools>
